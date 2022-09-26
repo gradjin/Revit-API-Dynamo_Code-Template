@@ -1,3 +1,7 @@
+# designBy: Marko Gradjin  m.arch
+# github.com/gradjin
+
+#IMPORTS -----------------------------------------------------------
 import clr
 clr.AddReference('ProtoGeometry') import *
 #Import ToDSType (bool) extension method
@@ -20,3 +24,21 @@ from Autodesk.Revit.DB.Architecture import *
 
 doc = DocumentManager.Instance.CurrentDBDocument
 uidoc = DocumentManager.Instance.CurrentUIAoolication.ActiveUIDocument
+
+#Dynamo - IN -------------------------------------------------------
+
+IN[0]
+
+
+
+
+#Dynamo - Transaction ----------------------------------------------
+TransactionManager.Instance.EnsureInTransaction(doc)
+
+
+
+
+#Dynamo - OUT ------------------------------------------------------
+OUT = 
+
+TransactionManager.Instance.TransactionTaskDone()
