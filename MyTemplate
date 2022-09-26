@@ -3,27 +3,28 @@
 
 #IMPORTS -----------------------------------------------------------
 import clr
-clr.AddReference('ProtoGeometry') import *
-#Import ToDSType (bool) extension method
+clr.AddReference('ProtoGeometry')
+from Autodesk.DesignScript.Geometry import *
+
 clr.AddReference("RevitNodes")
 import Revit
 clr.ImportExtensions(Revit.Elements)
-#Import geometry conversion extension methods
 clr.ImportExtensions(Revit.GeometryConversion)
-#Import DocumentManager and TransactionManager
-clr.AddReference("RevitServices")\
+
+clr.AddReference("RevitServices")
 import RevitServices
 from RevitServices.Persistence import DocumentManager
 from RevitServices.Transactions import TransactionManager
 from System.Collections.Generic import *
-#Import Revit API
+
+clr.AddReference("RevitAPI")
 import Autodesk
 from Autodesk.Revit.DB import *
 from Autodesk.Revit.DB.Architecture import *
 
 
 doc = DocumentManager.Instance.CurrentDBDocument
-uidoc = DocumentManager.Instance.CurrentUIAoolication.ActiveUIDocument
+uidoc = DocumentManager.Instance.CurrentUIApplication.ActiveUIDocument
 
 #Dynamo - IN -------------------------------------------------------
 
