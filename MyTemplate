@@ -22,7 +22,6 @@ import Autodesk
 from Autodesk.Revit.DB import *
 from Autodesk.Revit.DB.Architecture import *
 
-
 doc = DocumentManager.Instance.CurrentDBDocument
 uidoc = DocumentManager.Instance.CurrentUIApplication.ActiveUIDocument
 
